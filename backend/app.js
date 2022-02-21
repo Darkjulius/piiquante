@@ -4,8 +4,6 @@ const path = require('path');
 const helmet = require('helmet');
 require('dotenv').config();
 
-const rateLimit = require('./middleware/rate-limit');
-
 const sauceRoutes = require('./routes/sauces');
 const userRoutes = require('./routes/user');
 
@@ -21,8 +19,6 @@ mongoose.connect(process.env.SECRET,
 const app = express();
 
 app.use(helmet());
-
-app.use(rateLimit);
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
