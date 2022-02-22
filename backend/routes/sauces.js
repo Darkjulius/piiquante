@@ -2,7 +2,10 @@ const express = require('express');
 const router = express.Router();
 
 const sauceCtrl = require('../controllers/sauces');
+
+//Renforcement de la sécurité sur les routes
 const auth = require('../middleware/auth');
+
 const multer = require('../middleware/multer-config');
 
 router.post('/', auth, multer, sauceCtrl.createSauce);

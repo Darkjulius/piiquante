@@ -2,6 +2,7 @@ const passwordValidator = require('password-validator');
 
 const passwordSchema = new passwordValidator();
 
+//Règles définies pour la création du mot de passe.
 passwordSchema
     .is().min(8)                                    // Minimum 8 caractères
     .is().max(100)                                  // Maximum 100 caractères

@@ -1,4 +1,7 @@
+//Cryptage des données grâce à Bcrypt.
 const bcrypt = require('bcrypt');
+
+//Génération des tokens grâce à jsonwebtoken
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 require('dotenv').config();
