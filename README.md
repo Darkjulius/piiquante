@@ -1,19 +1,24 @@
-**Projet 6 : Construisez une API sécurisée pour une application d'avis gastronomiques**
+# Projet 6 du parcours Développeur web d'OpenClassrooms : Construisez une API sécurisée pour une application d'avis gastronomiques
+***
+### Compétences évaluées :
+* Explication du fonctionnement des middlewares (Middleware d'authentification par exemple) car il ne peut pas être vérifié à l'aide de l'application front-end.
+* Explication de la structure mon code (contrôleurs, routeurs, etc.) et les raisons pour lesquelles j'ai choisi cette structure.
+* Explication de mes méthodes de sécurisation de la base de données selon le RGPD et l'OWASP.
 
-**Contexte du projet**
+## Contexte du projet
 Piiquante se dédie à la création de sauces épicées dont les recettes sont gardées
 secrètes. Pour tirer parti de son succès et générer davantage de buzz, l'entreprise
 souhaite créer une application web dans laquelle les utilisateurs peuvent ajouter
 leurs sauces préférées et liker ou disliker les sauces ajoutées par les autres.
 
-Éléments à disposition : 
-- le repository FrontEnd du projet: https://github.com/OpenClassrooms-Student-Center/Web-Developer-P6.
+## Eléments à disposition
+* le repository FrontEnd du projet: https://github.com/OpenClassrooms-Student-Center/Web-Developer-P6.
 
-API Errors:
+## API Errors
 Les erreurs éventuelles doivent être renvoyées telles qu'elles sont produites, sans
 modification ni ajout. Si nécessaire, utilisez une nouvelle Error().
 
-API Routes:
+## API Routes
 Toutes les routes sauce pour les sauces doivent disposer d’une autorisation (le
 token est envoyé par le front-end avec l'en-tête d’autorisation : « Bearer <token> »).
 Avant que l'utilisateur puisse apporter des modifications à la route sauce, le code
@@ -21,9 +26,8 @@ doit vérifier si l'userId actuel correspond à l'userId de la sauce. Si l'userI
 correspond pas, renvoyer « 403: unauthorized request. » Cela permet de s'assurer
 que seul le propriétaire de la sauce peut apporter des modifications à celle-ci.
 
-Modèles de schémas
-
-Sauces:
+## Modèles de schéma
+# Sauces:
 ● userId : String — l'identifiant MongoDB unique de l'utilisateur qui a créé la
 sauce
 ● name : String — nom de la sauce
@@ -40,11 +44,11 @@ qui ont aimé (= liked) la sauce
 ● usersDisliked : [ "String <userId>" ] — tableau des identifiants des
 utilisateurs qui n'ont pas aimé (= disliked) la sauce
 
-Utilisateurs:
+# Utilisateurs
 ● email : String — adresse e-mail de l'utilisateur [unique]
 ● password : String — mot de passe de l'utilisateur haché
 
-Exigences de sécurité:
+# Exigences de sécurité
 ● Le mot de passe de l'utilisateur doit être haché.
 ● L'authentification doit être renforcée sur toutes les routes sauce requises.
 ● Les adresses électroniques dans la base de données sont uniques et un
