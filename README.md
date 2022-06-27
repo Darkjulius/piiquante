@@ -30,6 +30,7 @@ que seul le propriétaire de la sauce peut apporter des modifications à celle-c
 # Sauces:
 ● userId : String — l'identifiant MongoDB unique de l'utilisateur qui a créé la
 sauce.
+
 ● name : String — nom de la sauce
 ● manufacturer : String — fabricant de la sauce
 ● description : String — description de la sauce
