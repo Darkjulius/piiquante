@@ -29,7 +29,7 @@ que seul le propriétaire de la sauce peut apporter des modifications à celle-c
 ## Modèles de schéma
 # Sauces:
 ● userId : String — l'identifiant MongoDB unique de l'utilisateur qui a créé la
-sauce
+sauce.
 ● name : String — nom de la sauce
 ● manufacturer : String — fabricant de la sauce
 ● description : String — description de la sauce
